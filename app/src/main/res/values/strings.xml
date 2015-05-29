@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">N D Tower</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_edit">Edit</string>
+    <string name="title_activity_person_deatil">PersonDetailActivity</string>
+
+
+    <string name="title_person_section1">Personal</string>
+    <string name="title_person_section2">Family</string>
+    <string name="title_person_section3">Vehicles</string>
+    <string name="title_activity_show_all_persons">ShowAllPersons</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_show_all_flats">ShowAllFlats</string>
+    <string name="title_activity_show_all_vehicles">ShowAllVehicles</string>
+    <string name="title_activity_flat_deatil">FlatDetailActivity</string>
+
+
+    <string name="title_flat_section1">Flat details</string>
+    <string name="title_flat_section2">Owner</string>
+    <string name="title_flat_section3">Tenant</string>
+    <string name="title_activity_vehicle_detail">VehicleDetailActivity</string>
+
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
+
+    <string name="title_activity_show_image">ShowImage</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_pop_up_image">PopUpImage</string>
+    <string name="title_activity_pop_image">PopImage</string>
+</resources>

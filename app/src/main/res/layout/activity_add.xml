@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="in.ovtech.ndtower.AddActivity">
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pname"
+
+        android:layout_alignParentLeft="true"
+        android:hint="Enter a Person Name"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pemail"
+        android:layout_below="@+id/pname"
+        android:layout_alignParentLeft="true"
+        android:hint="Enter Email"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pmobile"
+        android:layout_below="@+id/pemail"
+        android:layout_alignParentLeft="true"
+        android:hint=" Enter a Mobile"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pwing"
+        android:layout_below="@+id/pmobile"
+        android:layout_alignParentLeft="true"
+        android:hint=" Enter a wing"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pflatno"
+        android:layout_below="@+id/pwing"
+        android:layout_alignParentLeft="true"
+        android:hint=" Enter a Flat No"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/poccupation"
+        android:layout_below="@+id/pflatno"
+        android:layout_alignParentLeft="true"
+        android:hint=" Enter a Flat No"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pocclocation"
+        android:layout_below="@+id/poccupation"
+        android:layout_alignParentLeft="true"
+        android:hint=" Enter a Flat No"/>
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="ADD Person"
+        android:id="@+id/btnAddPerson"
+        android:layout_below="@+id/pocclocation"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="in.ovtech.ndtower.PersonDetailActivity$PlaceholderFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Name"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Name"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/tname_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Address"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show address"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/taddress_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Email"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show email"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/temail_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Mobile"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Mobile"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/tmobile_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Occupation"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Occupation"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/toccuption_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Job Location"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Occupation"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/tocclocation_db"
+            />
+    </LinearLayout>
+</LinearLayout>

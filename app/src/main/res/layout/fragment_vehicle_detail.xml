@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="in.ovtech.ndtower.VehicleDetailActivity$PlaceholderFragment"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Vehicle Number"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vnumber_db"
+            />
+        <!--"@dimen/abc_text_size_display_4_material"-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Vehicle Type"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Type"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/vtype_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Wing"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Owner"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/vowner_db"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:text="Flat Number"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+
+            />
+        <TextView android:text="Show Flat"
+            android:layout_width="@dimen/abc_text_size_display_4_material"
+            android:layout_height="wrap_content"
+            android:id="@+id/vflat_db"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
