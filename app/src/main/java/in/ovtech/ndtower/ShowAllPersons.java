@@ -47,7 +47,7 @@ public class ShowAllPersons extends ActionBarActivity {
                         Intent intent=new Intent(getApplicationContext(),AddActivity.class);
                         intent.putExtra("name","Person");
                         startActivity(intent);
-                        finish();
+                        //finish();
                     }
                     else
                     {  //Person person =(Person)parent.getSelectedItem();

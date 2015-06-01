@@ -29,7 +29,7 @@ public class AddActivity extends ActionBarActivity {
         activity.getWindow().setAttributes(params);
 
         // This sets the window size, while working around the IllegalStateException thrown by ActionBarView
-        activity.getWindow().setLayout(700, 850);
+        activity.getWindow().setLayout(600, 850);
 
     }
         @Override
@@ -41,7 +41,7 @@ public class AddActivity extends ActionBarActivity {
         String calingclass=getIntent().getStringExtra("name");
         Log.d("mydata", calingclass);
         if(calingclass.equals("Person")) {
-            //setContentView(R.layout.activity_add);
+            setContentView(R.layout.activity_add);
 
             Button btnAddPerson = (Button) findViewById(R.id.btnAddPerson);
             final EditText pName = (EditText) findViewById(R.id.pname);
@@ -133,7 +133,7 @@ public class AddActivity extends ActionBarActivity {
         }
         else if(calingclass.equals( "Vehicle")){
 
-            //setContentView(R.layout.addvehicle);
+            setContentView(R.layout.addvehicle);
             final Vehicle vehicle=new Vehicle();
 
             Button btnVehicle = (Button) findViewById(R.id.btnAddVehicle);

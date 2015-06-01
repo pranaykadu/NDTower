@@ -16,7 +16,7 @@ public class GridViewActivity extends ActionBarActivity  implements
         AdapterView.OnItemClickListener {
 
     TextView selection;
-    String[] items = { "Person", "Flat", "Vehicle" ,"Images","AddActivity"};
+    String[] items = { "Person", "Flat", "Vehicle" ,"Images"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,14 +77,9 @@ public class GridViewActivity extends ActionBarActivity  implements
                 intent.setClass(getApplicationContext(),ShowAllVehicles.class);
                 break;
             case 3:
-                intent.setClass(getApplicationContext(),PopImage.class);
+                intent.setClass(getApplicationContext(),PopUpImage.class);
                 break;
-            case 4:
-                intent.setClass(getApplicationContext(), AddActivity.class);
-                intent.putExtra("name", "Flat");
-                startActivity(intent);
-                finish();
-                break;
+
 
         }
         startActivity(intent);

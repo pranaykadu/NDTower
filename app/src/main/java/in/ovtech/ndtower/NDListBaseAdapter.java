@@ -80,7 +80,7 @@ public class NDListBaseAdapter extends BaseAdapter implements Filterable {
         holder.img.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+/*
                 Intent intent= new Intent(context,ShowImage.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("f",R.mipmap.image1);
@@ -91,7 +91,7 @@ public class NDListBaseAdapter extends BaseAdapter implements Filterable {
                 View layout = mInflater.inflate(R.layout.activity_add ,null);
                PopupWindow pwindo1 = new PopupWindow(layout, 750, 750, true);
                 pwindo1.showAtLocation(layout, Gravity.CENTER, 0, 0);
-
+*/
 
              final Dialog settingsDialog = new Dialog(context);
                 settingsDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
