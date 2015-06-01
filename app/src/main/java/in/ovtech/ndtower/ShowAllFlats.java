@@ -35,7 +35,7 @@ public class ShowAllFlats extends ActionBarActivity {
         newrec.set_id(777);
         mylist.add(0,newrec);
         if(mylist.size() > 0) {
-            myAdapter = new NDFlatListBaseAdapter(mylist, getApplicationContext());
+            myAdapter = new NDFlatListBaseAdapter(mylist, this);
             ListView listView = (ListView) findViewById(R.id.listView1);
             listView.setAdapter(myAdapter);
             listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);

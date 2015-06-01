@@ -1,12 +1,19 @@
 package in.ovtech.ndtower;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -17,11 +24,11 @@ import java.util.ArrayList;
 public class NDFlatListBaseAdapter extends BaseAdapter implements Filterable {
     ArrayList<Flat> list= null;
     ArrayList<Flat> orig= null;
-
+    final Context context;
     public NDFlatListBaseAdapter(ArrayList<Flat>  list,Context context){
         this.list=list;
         this.mInflater= LayoutInflater.from(context);
-
+        this.context=context;
     }
     private LayoutInflater mInflater;
     @Override
@@ -46,6 +53,8 @@ public class NDFlatListBaseAdapter extends BaseAdapter implements Filterable {
             holder.name=(TextView) createdview.findViewById(R.id.name);
              holder.flatid=(TextView) createdview.findViewById(R.id.cid);
             //holder.type=(TextView) createdview.findViewById(R.id.btype);
+            holder.flatName=(TextView) createdview.findViewById(R.id.Flatname);
+            holder.img=(ImageView) createdview.findViewById(R.id.profile_pic);
             createdview.setTag(holder);
         }
         else
@@ -55,14 +64,62 @@ public class NDFlatListBaseAdapter extends BaseAdapter implements Filterable {
         holder.name.setText(list.get(position).get_wing() + " "  + list.get(position).get_flatno());
         holder.flatid.setText(Integer.toString(list.get(position).get_id()));
         //holder.type.setText(list.get(position).get_hello());
+        holder.img.setImageResource(R.mipmap.ic_launcher1);
+        holder.flatName.setText(list.get(position).get_OwnerName());
+
+
+        holder.img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+/*
+                Intent intent= new Intent(context,ShowImage.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("f",R.mipmap.image1);
+                context.startActivity(intent);
+                //Toast.makeText(context,"clicked",Toast.LENGTH_LONG).show();
+
+
+                View layout = mInflater.inflate(R.layout.activity_add ,null);
+               PopupWindow pwindo1 = new PopupWindow(layout, 750, 750, true);
+                pwindo1.showAtLocation(layout, Gravity.CENTER, 0, 0);
+*/
+
+                final Dialog settingsDialog = new Dialog(context);
+                settingsDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+                // settingsDialog.getWindow()
+                settingsDialog.getWindow().setBackgroundDrawable(
+                        new ColorDrawable(Color.GRAY));
+                settingsDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        //nothing;
+
+                    }
+                });
+
+                ImageView imageView = new ImageView(context);
+                imageView.setMinimumWidth(100);
+                imageView.setMinimumHeight(100);
+                imageView.setImageResource(R.mipmap.ic_launcher1);
+                settingsDialog.addContentView(imageView, new RelativeLayout.LayoutParams(500, 500));
+                //ViewGroup.LayoutParams.MATCH_PARENT,
+                // ViewGroup.LayoutParams.MATCH_PARENT));
+
+                settingsDialog.show();
+
+
+            }
+        });
+
         return createdview;
 
     }
     static class ViewHolder {
         TextView name;
         TextView flatid;
-        //TextView rate;
-        //TextView type;
+        ImageView img;
+        TextView flatName;
 
     }
     @Override

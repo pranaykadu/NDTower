@@ -24,7 +24,7 @@ public class PopUpImage extends ActionBarActivity {
         activity.getWindow().setAttributes((android.view.WindowManager.LayoutParams) params);
 
         // This sets the window size, while working around the IllegalStateException thrown by ActionBarView
-        activity.getWindow().setLayout(450, 450);
+        activity.getWindow().setLayout(750, 750);
 
     }
     @Override

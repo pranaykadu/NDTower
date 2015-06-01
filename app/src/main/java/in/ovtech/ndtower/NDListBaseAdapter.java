@@ -61,7 +61,7 @@ public class NDListBaseAdapter extends BaseAdapter implements Filterable {
             holder = new ViewHolder();
             holder.name=(TextView) createdview.findViewById(R.id.name);
            holder.personid=(TextView) createdview.findViewById(R.id.cid);
-            //holder.type=(TextView) createdview.findViewById(R.id.btype);
+            holder.flatName=(TextView) createdview.findViewById(R.id.Flatname);
             holder.img=(ImageView) createdview.findViewById(R.id.profile_pic);
             createdview.setTag(holder);
         }
@@ -73,8 +73,8 @@ public class NDListBaseAdapter extends BaseAdapter implements Filterable {
 
         holder.name.setText(list.get(position).get_name());
         holder.personid.setText(Integer.toString(list.get(position).get_id()));
-        holder.img.setImageResource(R.mipmap.ic_launcher1);
-        //holder.type.setText(list.get(position).get_hello());
+        holder.img.setImageResource(R.mipmap.image1);
+        holder.flatName.setText(list.get(position).get_flatname());
 
 
         holder.img.setOnClickListener( new View.OnClickListener() {
@@ -129,6 +129,7 @@ public class NDListBaseAdapter extends BaseAdapter implements Filterable {
         TextView name;
         TextView personid;
         ImageView  img;
+        TextView flatName;
 
         //TextView type;
 

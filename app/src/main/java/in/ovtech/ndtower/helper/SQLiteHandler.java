@@ -25,7 +25,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 11;
+    private static final int DATABASE_VERSION = 16;
 
     // Database Name
     private static final String DATABASE_NAME = "android_api";
@@ -215,7 +215,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
      ArrayList<Person> persons = new ArrayList();
      SQLiteDatabase db = this.getReadableDatabase();
 
-     String selectQuery = "SELECT id,name FROM " + TABLE_PERSON ;
+     String selectQuery = "SELECT distinct p.id,p.name,f." +KEY_WING + ",f."+KEY_FLATNO+" FROM " + TABLE_PERSON  + " as p inner join " + TABLE_FLAT
+             +" as f on f." + KEY_OWNERID +" = p." +KEY_MAPID;
      Cursor cursor = db.rawQuery(selectQuery, null);
 
      if(cursor.getCount() > 0){
@@ -224,6 +225,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
              Person person=new Person();
              person.set_id(cursor.getInt(0));
              person.set_name(cursor.getString(1));
+             person.set_flatname(cursor.getString(2) +" " +cursor.getString(3));
              persons.add(person);
              Log.d(TAG,cursor.getColumnName(0));
 
@@ -245,7 +247,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         ArrayList<Flat> flats = new ArrayList();
         SQLiteDatabase db = this.getReadableDatabase();
 
-        String selectQuery = "SELECT id,wing,flatno FROM " + TABLE_FLAT + " order by wing,flatno " ;
+        String selectQuery = "SELECT f.id,f.wing,f.flatno, p.name FROM " + TABLE_FLAT + " as f inner join  "+  TABLE_PERSON +" as p on " +
+                " p."+ KEY_MAPID + "= f." + KEY_OWNERID +" sorder by wing,flatno " ;
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         if(cursor.getCount() > 0){
@@ -255,6 +258,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
                 flat.set_id(cursor.getInt(0));
                 flat.set_wing(cursor.getString(1));
                 flat.set_flatno(Integer.toString(cursor.getInt(2)));
+                flat.set_OwnerName(cursor.getString(3));
                 flats.add(flat);
                 Log.d("name",cursor.getColumnName(0));
 
