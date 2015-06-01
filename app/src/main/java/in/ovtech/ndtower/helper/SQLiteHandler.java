@@ -248,7 +248,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         String selectQuery = "SELECT f.id,f.wing,f.flatno, p.name FROM " + TABLE_FLAT + " as f inner join  "+  TABLE_PERSON +" as p on " +
-                " p."+ KEY_MAPID + "= f." + KEY_OWNERID +" sorder by wing,flatno " ;
+                " p."+ KEY_MAPID + "= f." + KEY_OWNERID +" order by wing,flatno " ;
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         if(cursor.getCount() > 0){
